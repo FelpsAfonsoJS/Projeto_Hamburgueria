@@ -2,9 +2,9 @@ package model;
 
 public class ItemPedido {
 
-    Produto produto;
-    int quantidade;
-    int quantidadePaga = 0;
+    private Produto produto;
+    private int quantidade;
+    private int quantidadePaga = 0;
 
     public ItemPedido(Produto produto, int quantidade) {
         if (produto == null) {
@@ -18,11 +18,11 @@ public class ItemPedido {
     }
 
     public double subtotal() {
-        return produto.preco * quantidade;
+        return produto.getPreco() * quantidade;
     }
 
     public double valorEmAberto() {
-        return produto.preco * (quantidade - quantidadePaga);
+        return produto.getPreco() * (quantidade - quantidadePaga);
     }
 
     public void pagarQuantidade(int qtd) {

@@ -6,9 +6,9 @@ import java.util.ArrayList;
 
 public class Pedido {
 
-    String cliente;
-    LocalDate data;
-    ArrayList<ItemPedido> itens = new ArrayList<>();
+    private final String cliente;
+    private final LocalDate data;
+    private final ArrayList<ItemPedido> itens = new ArrayList<>();
 
     public Pedido(String cliente) {
         if (cliente == null || cliente.isEmpty()) {
